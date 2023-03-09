@@ -1,0 +1,317 @@
+const express = require('express')
+const router = express.Router()
+router.get('/getlunbo',(req,res)=>{
+	res.send({
+		message:[{id:1,url:"https://img1.baidu.com/it/u=3417930331,2765693697&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"},
+		{id:2,url:"https://img2.baidu.com/it/u=1299115553,2539439143&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"},
+		{id:3,url:"https://img1.baidu.com/it/u=4046776193,408855920&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"},],
+		status:0
+	})
+})
+router.get('/getgoods',(req,res)=>{
+	res.send({
+		status:0,
+		message:[
+			{
+				id:11,
+				title:"美味（鲜花饼） 今天只卖999 大卖特卖",
+				add_time:"2023-03-06",
+				zhaiyao:"八街鲜花饼，该饼分为两种款式，玫瑰和茉莉",
+				click:0,
+				img_url:"https://img1.baidu.com/it/u=641328684,2124453507&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500",
+				sell_price:"2195",
+				market_price:"2499",
+				stock_quantity:60
+			},
+			{
+				id:12,
+				title:"美味（鲜花饼） 今天只卖899 大卖特卖",
+				add_time:"2023-03-06",
+				zhaiyao:"昆明鲜花饼，该饼分为两种款式，玫瑰和茉莉",
+				click:0,
+				img_url:"https://img1.baidu.com/it/u=2883804040,545581746&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+				sell_price:"2000",
+				market_price:"1999",
+				stock_quantity:60
+			},
+			{
+				id:13,
+				title:"美味（鲜花饼） 今天只卖999 大卖特卖",
+				add_time:"2023-03-06",
+				zhaiyao:"四川鲜花饼，该饼分为两种款式，玫瑰和茉莉",
+				click:0,
+				img_url:"https://img2.baidu.com/it/u=1440590243,2531140473&fm=253&fmt=auto&app=120&f=JPEG?w=640&h=640",
+				sell_price:"1888",
+				market_price:"1777",
+				stock_quantity:60
+			},
+			{
+				id:14,
+				title:"美味（鲜花饼） 今天只卖999 大卖特卖",
+				add_time:"2023-03-06",
+				zhaiyao:"八街鲜花饼，该饼分为两种款式，玫瑰和茉莉",
+				click:0,
+				img_url:"https://img0.baidu.com/it/u=2599832894,1636205352&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+				sell_price:"1666",
+				market_price:"1555",
+				stock_quantity:60
+			},
+			{
+				id:15,
+				title:"美味（鲜花饼） 今天只卖999 大卖特卖",
+				add_time:"2023-03-06",
+				zhaiyao:"八街鲜花饼，该饼分为两种款式，玫瑰和茉莉",
+				click:0,
+				img_url:"https://img1.baidu.com/it/u=2161595292,1743764079&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+				sell_price:"1444",
+				market_price:"1333",
+				stock_quantity:60
+			},
+			{
+				id:16,
+				title:"美味（鲜花饼） 今天只卖999 大卖特卖",
+				add_time:"2023-03-06",
+				zhaiyao:"八街鲜花饼，该饼分为两种款式，玫瑰和茉莉",
+				click:0,
+				img_url:"https://img0.baidu.com/it/u=30879604,3161065584&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500",
+				sell_price:"1222",
+				market_price:"1111",
+				stock_quantity:60
+			},
+		]
+	})
+})
+router.get('/getimgcategory',(req,res)=>{
+	res.send({
+		status:0,
+		message:[
+			{title:"绚丽玫瑰",id:21},
+			{title:"清香茉莉",id:22},
+			{title:"美味油菜",id:23},
+			{title:"灿烂朵蜜",id:24},
+			{title:"寻甸玫瑰",id:25},
+			{title:"昭通火腿",id:26},
+			{title:"大理乳饼",id:27},
+			{title:"脆炸牛奶",id:28},
+			{title:"美味凉粉",id:29},
+			{title:"过桥米线",id:200},
+			{title:"云南美女",id:210},
+		]
+	})
+})
+router.get('/getimg/:id',(req,res)=>{
+	console.log(req.params.id);
+	switch(req.params.id){
+		case '21':
+		res.send({
+			status:0,
+			message:[
+				{img_url:"https://img2.baidu.com/it/u=986861200,1161921603&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:21,msg:'美味的鲜花让人着迷,让人在梦里都时时刻刻去惦记去挂念'},
+				{img_url:"https://img2.baidu.com/it/u=2688248142,3177824712&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:21,msg:'整盒的鲜花饼让人欲罢不能，不论是送礼还是自品都是佳品'},
+				{img_url:"https://img0.baidu.com/it/u=2364721229,2664698864&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:21,msg:'掰开鲜花饼，美丽的鲜花呼之欲出，就像开了一场花瓣的绽放'},
+				{img_url:"https://img0.baidu.com/it/u=29005500,4014121129&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:21,msg:'鲜花饼精选玫瑰，每一片花瓣都是精挑细选，满足你的口味'},
+			]
+		})
+		break;
+		case '22':
+		res.send({
+			status:0,
+			message:[
+				{img_url:"https://img2.baidu.com/it/u=4055739952,3224939807&fm=253&fmt=auto&app=120&f=JPEG?w=667&h=500",id:22,msg:'茉莉花，茉莉花，闻着香，泡着香，喝着更香'},
+				{img_url:"https://img2.baidu.com/it/u=3103610412,2858001724&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:22,msg:'好一朵美丽的茉莉花呀，盛开的茉莉花就像那个曾经的初恋'},
+				{img_url:"https://img0.baidu.com/it/u=3801994001,3744707680&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:22,msg:'茉莉花的绽放，就像高中那羞涩的恋爱，含蓄，清香，白净，单纯，让人着迷'},
+				{img_url:"https://img1.baidu.com/it/u=3825303149,1881076534&fm=253&fmt=auto&app=120&f=JPEG?w=667&h=500",id:22,msg:'每一朵茉莉花泡茶，都是由员工精挑细选而成'},
+			]
+		})
+		break;
+		case '23':
+		res.send({
+			status:0,
+			message:[
+				{img_url:"https://img0.baidu.com/it/u=1809378115,76459517&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:23,msg:'金灿灿的油菜花像极了朝气磅礴的年轻人，散发着活力'},
+				{img_url:"https://img1.baidu.com/it/u=1465310924,982788386&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:23,msg:'美味的油菜花总是散发着让人胃口大开的香'},
+				{img_url:"https://img1.baidu.com/it/u=3430652843,880572845&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:23,msg:'油菜花的绽放，预示着夏天的到来，也预示着美味的油菜花饼即将出现'},
+				{img_url:"https://img0.baidu.com/it/u=1489086315,2759322315&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:23,msg:'油菜花不仅好看，炸出来的油更是香飘万里'},
+			]
+		})
+		break;
+		case '24':
+		res.send({
+			status:0,
+			message:[
+				{img_url:"https://img0.baidu.com/it/u=3865390079,3111144244&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:24,msg:'朵蜜朵蜜，每一次喝酒伤的胃，背后总有一被朵蜜水在支撑着你的胃'},
+				{img_url:"https://img0.baidu.com/it/u=3152298556,269797143&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:24,msg:'每一份密都是由蜜蜂辛辛苦苦而采，最后把香甜带给了我们'},
+				{img_url:"https://img2.baidu.com/it/u=3817196817,824302078&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:24,msg:'高血压患者的福音，一瓶苹果密喝出健康喝出长寿'},
+				{img_url:"https://img2.baidu.com/it/u=3580427192,316195407&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:24,msg:'美味的蜂蜜不管是送人还是自品都别有一番风味'},
+			]
+		})
+		break;
+		case '25':
+		res.send({
+			status:0,
+			message:[
+				{img_url:"https://img2.baidu.com/it/u=3943665637,1135835524&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:25,msg:'美丽的寻甸玫瑰充斥着迷人的浪漫，与爱你的勇敢'},
+				{img_url:"https://img2.baidu.com/it/u=2488289194,1553377443&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:25,msg:'花一直属于装饰品，而包装的花，包装成了花的装饰品，你值得拥有'},
+				{img_url:"https://img2.baidu.com/it/u=777063824,2844924175&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:25,msg:'流沙玫瑰的香就像握不住的流沙在手里慢慢流逝'},
+				{img_url:"https://img2.baidu.com/it/u=1737521857,3455345670&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:25,msg:'再动人的情话，再真挚的感情，也是由一捧花开始的'},
+			]
+		})
+		break;
+		case '26':
+		res.send({
+			status:0,
+			message:[
+				{img_url:"https://img2.baidu.com/it/u=3233839931,3846935879&fm=253&fmt=auto?w=1068&h=800",id:26,msg:'火腿火腿，丰富的营养，迷人的香气，迸发的美味'},
+				{img_url:"https://img0.baidu.com/it/u=3180839211,4164591120&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:26,msg:'宣威的火腿外表丑陋但是内在的美味确是名扬万里'},
+				{img_url:"https://img2.baidu.com/it/u=1778011110,2875012947&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:26,msg:'切好的玫瑰就像卸下了伪装的你，外在，远远比不上内在美'},
+				{img_url:"https://img0.baidu.com/it/u=334254992,432252425&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:26,msg:'乳饼遇到了火腿就像我遇到了你，随奇异，但组合起来确实名菜'},
+			]
+		})
+		break;
+		case '27':
+		res.send({
+			status:0,
+			message:[
+				{img_url:"https://img2.baidu.com/it/u=1410687109,222084278&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:27,msg:'美食的诞生总是奇异，就像裹了密的烤乳扇，美味，实在美味'},
+				{img_url:"https://img0.baidu.com/it/u=3495583949,345401019&fm=253&fmt=auto&app=138&f=JPG?w=667&h=500",id:27,msg:'乳扇的诞生离不开乳饼，两者同生，但味道却不同，着实让人着迷'},
+				{img_url:"https://img1.baidu.com/it/u=3830216083,1094836330&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:27,msg:'当肉片放在里乳饼上，就像渴了的人遇到了水，让人迫不及待'},
+				{img_url:"https://img0.baidu.com/it/u=830818989,686752681&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:27,msg:'乳饼，乳饼，忠实的人爱你，不喜欢的人厌恶你，但是你就是你'},
+			]
+		})
+		break;
+		case '28':
+		res.send({
+			status:0,
+			message:[
+				{img_url:"https://img2.baidu.com/it/u=1041094797,3532970362&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:28,msg:'外表的金色战衣，让人想不到里面的你却洁白如雪'},
+				{img_url:"https://img0.baidu.com/it/u=3985119066,1219991094&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:28,msg:'牛可能想不到，原来有一天自己被挤出来的牛奶居然会被油炸'},
+				{img_url:"https://img2.baidu.com/it/u=3776624465,2716672729&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:28,msg:'吱吱作响的炸牛奶，与肚子咕咕叫唤的你，像是一场精美的演奏'},
+				{img_url:"https://img2.baidu.com/it/u=225404852,251266169&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:28,msg:'外表的不规则，是内在美的载体，洁白如雪的炸牛奶味道也是美味'},
+			]
+		})
+		break;
+		case '29':
+		res.send({
+			status:0,
+			message:[
+				{img_url:"https://img2.baidu.com/it/u=3739081420,1175017459&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:29},
+				{img_url:"https://img2.baidu.com/it/u=2507138572,3777862593&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:29},
+				{img_url:"https://img0.baidu.com/it/u=1902364731,2323030315&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:29},
+				{img_url:"https://img2.baidu.com/it/u=3402986008,4229541775&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:29},
+			]
+		})
+		break;
+		case '200':
+		res.send({
+			status:0,
+			message:[
+				{img_url:"https://img1.baidu.com/it/u=3066741616,3225875756&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:200,msg:'凉卷粉，凉卷粉，出了云南，就见不到了你'},
+				{img_url:"https://img2.baidu.com/it/u=3025565687,3646499740&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:200,msg:'夏日的饥饿，总是伴随着你，白嫩的皮肤擦上酱汁填饱一个又一个胃'},
+				{img_url:"https://img2.baidu.com/it/u=1633095616,3381664701&fm=253&fmt=auto?w=500&h=375",id:200,msg:'肚子饿时的小零食，夏日炎热的降温剂，酷热太阳下保持冰冷的你'},
+				{img_url:"https://img2.baidu.com/it/u=2877804634,1746934629&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:200,msg:'云南名小吃，送给最爱的你，让它在你饥饿时给你送来温饱，在炎热时给你送来一份清凉'},
+			]
+		})
+		break;
+		case '210':
+		res.send({
+			status:0,
+			message:[
+				{img_url:"https://img1.baidu.com/it/u=1406536895,3292357043&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:210,msg:'过桥的米线，经久的传说，动人的爱情，努力的你'},
+				{img_url:"https://img2.baidu.com/it/u=1267581870,3052347936&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:210,msg:'别看外表冷静，内在的滚烫刺激每一个心急的吃客'},
+				{img_url:"https://img0.baidu.com/it/u=711314075,3837795720&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",id:210,msg:'云南的米线，云南的桥，云南的鸡汤，不一样的味道'},
+				{img_url:"https://img2.baidu.com/it/u=3063694221,1732633187&fm=253&fmt=auto&app=120&f=JPEG?w=1068&h=800",id:210,msg:'所有的食材都可以包在大大的碗里，喂饱饥饿时的你'},
+			]
+		})
+		break;
+	}
+
+
+})
+router.get('/getnewslist',(req,res)=>{
+	res.send({
+		status:0,
+		messgae:[
+			{
+				id:13,
+				title:"房价暴跌50个百分点，啦啦啦游戏统计",
+				add_time:"2023-03-07..",
+				zhaiyao:"今年的房子我们应该冲吗？",
+				click:1,
+				img_url:"https://img2.baidu.com/it/u=3694164320,3480225188&fm=253&fmt=auto&app=138&f=JPEG?w=663&h=500"
+			},
+			{
+				id:13,
+				title:"房价暴跌50个百分点，啦啦啦游戏统计",
+				add_time:"2023-03-07..",
+				zhaiyao:"今年的房子我们应该冲吗？",
+				click:1,
+				img_url:"https://img2.baidu.com/it/u=3694164320,3480225188&fm=253&fmt=auto&app=138&f=JPEG?w=663&h=500"
+			},
+			{
+				id:13,
+				title:"房价暴跌50个百分点，啦啦啦游戏统计",
+				add_time:"2023-03-07..",
+				zhaiyao:"今年的房子我们应该冲吗？",
+				click:1,
+				img_url:"https://img2.baidu.com/it/u=3694164320,3480225188&fm=253&fmt=auto&app=138&f=JPEG?w=663&h=500"
+			},
+			{
+				id:13,
+				title:"房价暴跌50个百分点，啦啦啦游戏统计",
+				add_time:"2023-03-07..",
+				zhaiyao:"今年的房子我们应该冲吗？",
+				click:1,
+				img_url:"https://img2.baidu.com/it/u=3694164320,3480225188&fm=253&fmt=auto&app=138&f=JPEG?w=663&h=500"
+			},
+			{
+				id:13,
+				title:"房价暴跌50个百分点，啦啦啦游戏统计",
+				add_time:"2023-03-07..",
+				zhaiyao:"今年的房子我们应该冲吗？",
+				click:1,
+				img_url:"https://img2.baidu.com/it/u=3694164320,3480225188&fm=253&fmt=auto&app=138&f=JPEG?w=663&h=500"
+			},
+			{
+				id:13,
+				title:"房价暴跌50个百分点，啦啦啦游戏统计",
+				add_time:"2023-03-07..",
+				zhaiyao:"今年的房子我们应该冲吗？",
+				click:1,
+				img_url:"https://img2.baidu.com/it/u=3694164320,3480225188&fm=253&fmt=auto&app=138&f=JPEG?w=663&h=500"
+			},
+			{
+				id:13,
+				title:"房价暴跌50个百分点，啦啦啦游戏统计",
+				add_time:"2023-03-07..",
+				zhaiyao:"今年的房子我们应该冲吗？",
+				click:1,
+				img_url:"https://img2.baidu.com/it/u=3694164320,3480225188&fm=253&fmt=auto&app=138&f=JPEG?w=663&h=500"
+			},
+			{
+				id:13,
+				title:"房价暴跌50个百分点，啦啦啦游戏统计",
+				add_time:"2023-03-07..",
+				zhaiyao:"今年的房子我们应该冲吗？",
+				click:1,
+				img_url:"https://img2.baidu.com/it/u=3694164320,3480225188&fm=253&fmt=auto&app=138&f=JPEG?w=663&h=500"
+			},
+			{
+				id:13,
+				title:"房价暴跌50个百分点，啦啦啦游戏统计",
+				add_time:"2023-03-07..",
+				zhaiyao:"今年的房子我们应该冲吗？",
+				click:1,
+				img_url:"https://img2.baidu.com/it/u=3694164320,3480225188&fm=253&fmt=auto&app=138&f=JPEG?w=663&h=500"
+			},
+			{
+				id:13,
+				title:"房价暴跌50个百分点，啦啦啦游戏统计",
+				add_time:"2023-03-07..",
+				zhaiyao:"今年的房子我们应该冲吗？",
+				click:1,
+				img_url:"https://img2.baidu.com/it/u=3694164320,3480225188&fm=253&fmt=auto&app=138&f=JPEG?w=663&h=500"
+			},
+		]
+	})
+})
+module.exports = router

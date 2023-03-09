@@ -1,0 +1,49 @@
+<script>
+	export default {
+		onLaunch: function() {
+			console.log('App Launch')
+		},
+		onShow: function() {
+			console.log('App Show')
+		},
+		onHide: function() {
+			console.log('App Hide')
+		}
+	}
+</script>
+
+<style>
+	/*每个页面公共css */
+	@font-face {
+	  font-family: "iconfont"; /* Project id 3934944 */
+	  src: url('~@/static/fonts/iconfont.woff2?t=1678103925329') format('woff2'),
+	       url('~@/static/fonts/iconfont.woff?t=1678103925329') format('woff'),
+	       url('~@/static/fonts/iconfont.ttf?t=1678103925329') format('truetype');
+	}
+	
+	.iconfont {
+	  font-family: "iconfont" !important;
+	  font-size: 16px;
+	  font-style: normal;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	}
+	
+	.icon-lianxiwomen:before {
+	  content: "\e686";
+	}
+	
+	.icon-shipin:before {
+	  content: "\e64a";
+	}
+	
+	.icon-chaoshi:before {
+	  content: "\e6b0";
+	}
+	
+	.icon-tupian:before {
+	  content: "\e8ba";
+	}
+	
+	
+</style>
